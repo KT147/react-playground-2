@@ -140,3 +140,7 @@ form button {
   font-size: 18px;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}

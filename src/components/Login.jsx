@@ -23,27 +23,31 @@ function Login() {
     const { name, value } = event.target;
 
     setContact((prev) => {
-      if (name === "fName") {
-        return {
-          fName: value,
-          lName: prev.lName,
-          email: prev.email
-        };
+      return{
+        ...prev,
+        [name]: value
       }
-      if (name === "lName") {
-        return {
-          fName: prev.fName,
-          lName: value,
-          email: prev.email
-        };
-      }
-      if (name === "email") {
-        return {
-          fName: prev.fName,
-          lName: prev.lName,
-          email: value
-        };
-      }
+      // if (name === "fName") {
+        // return {
+        //   fName: value,
+        //   lName: prev.lName,
+        //   email: prev.email
+        // }; 
+      // }
+      // if (name === "lName") {
+      //   return {
+      //     fName: prev.fName,
+      //     lName: value,
+      //     email: prev.email
+      //   };
+      // }
+      // if (name === "email") {
+      //   return {
+      //     fName: prev.fName,
+      //     lName: prev.lName,
+      //     email: value
+      //   };
+      // }
     });
   }
 

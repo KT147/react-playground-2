@@ -3,6 +3,7 @@ import Login from "./Login";
 import { Link, Route, Routes } from "react-router-dom";
 import EmojiPedia from "./EmojiPedia";
 import { useState } from "react";
+import Todo from "./Todo";
 
 const numbers = [1, 22, 45, 66, 78, 100];
 
@@ -33,10 +34,12 @@ function App() {
       <Routes>
         <Route path="/login" exact element={<Login />} />
         <Route path="/emojipedia" exact element={<EmojiPedia />} />
+        <Route path="/todo" exact element={<Todo />} />
       </Routes>
-      <nav>
+      <nav className="navbar">
         <Link to="/login">Login</Link>
         <Link to="/emojipedia">EmojiPedia</Link>
+        <Link to="/todo">Todo</Link>
       </nav>
 
       {/* <div>{fileterdNumbers()}</div>
